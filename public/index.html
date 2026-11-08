@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SockLock · варіації для модифікацій</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>SockLock · варіації для модифікацій</h1>
+      <p class="sub">Скрипт-переможець на вході, хуки, перші фрази й текст на екрані на виході</p>
+    </div>
+    <div id="badge" class="badge">…</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="in-title">
+      <h2 id="in-title">Вхід</h2>
+
+      <label for="sample">Приклад скрипта</label>
+      <select id="sample"><option value="">Свій скрипт</option></select>
+
+      <label for="script">Скрипт-переможець</label>
+      <textarea id="script" rows="13" placeholder="Вставте текст скрипта англійською…"></textarea>
+      <div class="hint" id="script-hint"></div>
+
+      <fieldset class="counts">
+        <legend>Скільки варіантів</legend>
+        <label>Хуки <input id="n-hook" type="number" min="0" value="5"></label>
+        <label>Перші фрази <input id="n-first_line" type="number" min="0" value="5"></label>
+        <label>Текст на екрані <input id="n-on_screen" type="number" min="0" value="5"></label>
+      </fieldset>
+
+      <button id="go" class="primary" type="button">Згенерувати</button>
+      <p id="msg" class="msg" role="status"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="out-title" aria-live="polite">
+      <div class="out-head">
+        <h2 id="out-title">Результат</h2>
+        <button id="export" type="button" class="ghost" hidden>Експорт CSV</button>
+      </div>
+      <div id="empty" class="empty">Тут з’являться варіанти. Позначте галочкою ті, що підуть у монтаж, і експортуйте їх у CSV.</div>
+      <div id="stats" class="stats" hidden></div>
+      <ul id="warnings" class="warnings" hidden></ul>
+      <details id="analysis" class="analysis" hidden></details>
+      <div id="results"></div>
+      <details id="rejected" class="rejected" hidden></details>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

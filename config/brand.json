@@ -1,0 +1,27 @@
+{
+  "name": "SockLock",
+  "description": "SockLock sells magnetic socks that do not get lost in the washing machine. A small magnet on the cuffs keeps each pair together.",
+  "audience": "US adults who do their own laundry and are tired of odd, mismatched or missing socks.",
+  "voice": "Friendly, plain words, a little dry humor, no hype, no exclamation-mark overload.",
+  "facts": [
+    "Magnetic socks: a small magnet on the cuffs keeps each pair together.",
+    "Pairs do not get lost in the washing machine.",
+    "Subscription: five pairs for $29, then a new shipment once a quarter."
+  ],
+  "angles": [
+    "relatable moment",
+    "curiosity gap",
+    "light humor",
+    "direct question",
+    "benefit-first",
+    "mini story",
+    "myth-busting",
+    "contrarian take"
+  ],
+  "limits": {
+    "hookMaxWords": 12,
+    "firstLineMaxWords": 20,
+    "onScreenMaxWords": 7,
+    "onScreenMaxChars": 42
+  }
+}

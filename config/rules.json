@@ -1,0 +1,53 @@
+{
+  "_comment": "Детерміновані правила harness. Це приклад консервативних запобіжників, а не юридична перевірка політик Meta: команда має підлаштувати список під свої рекламні політики.",
+  "similarityThreshold": 0.7,
+  "originalSimilarityThreshold": 0.8,
+  "allowedPrices": ["$29"],
+  "forbidden": [
+    {
+      "pattern": "\\b(guarantee[ds]?|guaranteed|money[- ]back)\\b",
+      "reason": "Гарантії, яких немає в оферті",
+      "hint": "do not promise guarantees"
+    },
+    {
+      "pattern": "\\b(100\\s?%|zero risk|risk[- ]free)\\b",
+      "reason": "Абсолютні обіцянки без підтвердження",
+      "hint": "no absolute promises"
+    },
+    {
+      "pattern": "\\bfree (shipping|trial|socks|pairs?|gift|returns?)\\b",
+      "reason": "Вигадана безкоштовна пропозиція",
+      "hint": "do not invent free offers"
+    },
+    {
+      "pattern": "\\b(\\d+\\s?%\\s?off|on sale|discount|coupon|promo code|limited[- ]time|today only|last chance|while supplies last|selling out)\\b",
+      "reason": "Вигадана акція чи дефіцит",
+      "hint": "do not invent discounts or scarcity"
+    },
+    {
+      "pattern": "\\b(miracle|cures?|heals?|doctor|clinically|fda)\\b",
+      "reason": "Медичні або наукові заяви без підстав",
+      "hint": "no medical claims"
+    },
+    {
+      "pattern": "\\bbefore (and|&|/) ?after\\b",
+      "reason": "Формат «до/після» часто порушує політики Meta",
+      "hint": "no before/after framing"
+    },
+    {
+      "pattern": "\\byou('re| are)\\s+(fat|overweight|depressed|broke|poor|sick|old|ugly)\\b",
+      "reason": "Припущення про особисті атрибути глядача (політика Meta)",
+      "hint": "do not assert personal attributes about the viewer"
+    },
+    {
+      "pattern": "\\b(\\d-star|five-star|reviews?|rated|bestsell(er|ing)|award[- ]winning|as seen (on|in)|number one|#1)\\b",
+      "reason": "Вигадане соціальне підтвердження чи суперлатив",
+      "hint": "no invented social proof or rankings"
+    },
+    {
+      "pattern": "\\b(thousands|millions|hundreds) of (people|customers|users|happy|families)\\b",
+      "reason": "Вигадана статистика клієнтів",
+      "hint": "no invented customer numbers"
+    }
+  ]
+}
